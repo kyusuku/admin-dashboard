@@ -15,7 +15,7 @@ input, button {
     border: none;
 }
 
-button:hover, li:hover {
+button:hover, li:hover, img:hover {
     cursor: pointer;
 }
 
@@ -150,5 +150,135 @@ body {
 
 .content {
     padding: 20px;
+    padding-bottom: 40px;
+    padding-top: 30px;
     background-color: #c2dcea75;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 20px;
+}
+
+.content .project.title{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.projects {
+    grid-row: 2 / 5;
+    grid-column: 1 / 2;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.projects .card {
+    background-color: white;
+    border-left: 8px solid orange;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.projects .card h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.projects .card p {
+    color: #6b7f8a;
+    font-size: 1rem;
+    max-width: 50ch;
+}
+
+.projects .card .card-icons {
+    align-self: flex-end;
+    position: absolute;
+    bottom: 30px;
+}
+
+.content .announcement.title {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.content .title {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.announcements .card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    display: flex;
+    flex-direction: column;
+
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.announcements .card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.announcements .card p {
+    font-size: 0.7rem;
+    color: #6b7f8a;
+}
+
+.announcements .card .line {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.content .trending.title {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+.trending .card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+}
+
+.trending .card .user {
+    align-self: center;
+}
+
+.trending .other-username {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trending .project-name {
+    color: #6b7f8a;
+    font-size: 0.9rem;
 }
