@@ -3,8 +3,20 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 30px;
     list-style-type: none;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input, button {
+    border: none;
+}
+
+button:hover, li:hover {
+    cursor: pointer;
 }
 
 html, body {
@@ -12,10 +24,15 @@ html, body {
     height: 100%;
 }
 
+body {
+    font-size: 16px;
+}
+
 .wrapper {
     display: grid;
-    grid: 1fr 4fr / 1fr 4fr;
-
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+ 
     height: 100vh;
 }
 
@@ -25,9 +42,14 @@ html, body {
     grid-template-columns: 1fr;
     grid-template-rows: 10% 40% 20% 30%;
 
-    background-color: rgb(55, 206, 198);
+    color: white;
+    background-color: #001131;
     font-weight: bold;
     gap: 30px;
+}
+
+.sidebar img {
+    filter: brightness(0) invert(1);
 }
 
 .sidebar-head {
@@ -35,6 +57,7 @@ html, body {
     grid-template-columns: 1fr 5fr;
     align-items: center;
     padding: 20px;
+    font-size: 1.5rem;
 }
 
 .sidebar-head img, .nav img, .settings img {
@@ -53,22 +76,79 @@ html, body {
 }
 
 .sidebar li {
-    font-size: 0.8rem;
+    font-size: 1.25rem;
 }
 
 .settings {
     grid-template-rows: repeat(3, 1fr);
-
 }
 
 .header {
-    padding: 20px;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    row-gap: 20px;
+    padding: 20px 40px;
+    box-shadow: 0 6px 2px -2px gray;
 }
 
-.header-head {
+.search-area {
     display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+#textbox {
+    height: 30px;
+    flex: 1;
+    margin-right: 120px;
+    border-radius: 20px;
+    background-color: rgb(235, 234, 234);
+    background-color:  #c2dcea75;
+}
+
+.profile-area {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.username-area {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.username-area .text {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.username-area .username {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.button-area {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.button-area button {
+    padding: 10px 24px;
+    border-radius: 20px;
+    color: white;
+    background-color: #001131;
+    font-weight: bold;
 }
 
 .content {
     padding: 20px;
+    background-color: #c2dcea75;
 }
