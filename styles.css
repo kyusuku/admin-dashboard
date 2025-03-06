@@ -185,7 +185,6 @@ body {
 
     display: flex;
     flex-direction: column;
-    /* position: relative; */
     height: 100%;
 }
 
@@ -203,8 +202,6 @@ body {
 
 .projects .card .card-icons {
     align-self: flex-end;
-    /* position: absolute;
-    bottom: 30px; */
     display: flex;
     gap: 10px;
     margin-top: auto;
